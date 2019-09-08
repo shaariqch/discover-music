@@ -1,6 +1,3 @@
-const client_id = "e17efcc20f9749dd9e7eb9756fb8b9a5";
-const client_secret = "7a3bd30709f74613b5ac5fbd46b0d0c4";
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const pino = require("express-pino-logger")();
@@ -17,8 +14,7 @@ app.get("/authorization", (req, res) => {
     headers: {
       "Access-Control-Allow-Origin": "*",
       Authorization:
-        "Basic " +
-        new Buffer(client_id + ":" + client_secret).toString("base64")
+        "Basic ZTE3ZWZjYzIwZjk3NDlkZDllN2ViOTc1NmZiOGI5YTU6NjIwN2RhMWQyNTIyNGUxYTlhOGZiNmY1MzFlYTM4ZDA="
     },
     form: {
       grant_type: "client_credentials"
